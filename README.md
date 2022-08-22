@@ -18,6 +18,9 @@
 
   Yet another way to execute JavaScript is by inserting it inside `<script>` tag of a <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> document.
 
+  ```bash
+  node file.js
+  ```
 
 ## Variables & DataTypes
 A variable is a container that stores a value. This is very similar to the containers used to store a datatype.
@@ -85,8 +88,9 @@ let a = 7; // Declaring Variable
 
     ```js
     const item = {
-      name: "JavaScript"
-      work: "Web Development",
+      name: "JavaScript",
+      company: "Netscape",
+      work: "Web ,Development",
       type: "Programming Language",
       file_extension: ".js"
       engine: "ECMAScript",
@@ -104,3 +108,159 @@ let a = 7; // Declaring Variable
       pass_status: true,
     }
     ```
+
+* ### Expressions & Conditions
+
+  A fragment of code that produces a value is called an expression. Every value written literally is an expression.
+
+* ### Operators in JavaScript
+
+  #### 1. Arithmetic Operators :-
+
+  <p align="center">
+
+   | Sign | Name |
+   |:---:|:---:|
+   | `+` | Addition |
+   | `-` | Subtraction |
+   | `*` | Multiplication |
+   | `/`| Division |
+   | `**` | Exponentiation |
+   | `%` | Modulus |
+   | `++` | Increment |
+   | `--` | Decrement |
+
+  </p>
+
+  #### 2. Assignment Operators :-
+
+    <p align="center">
+
+   | Sign | Name |
+   |:---:|:---:|
+   | `=` | `x = y` |
+   | `+=` | `x = x + y` |
+   | `-=` | `x = x - y` |
+   | `*=`| `x = x * y` |
+   | `/=` | `x = x / y` |
+   | `%=` | `x = x % y` |
+   | `**=` | `x = x ** y` |
+
+  </p>
+
+  #### 3. Comparision Operators :-
+
+    <p align="center">
+
+   | Sign | Name |
+   |:---:|:---:|
+   | `==` | Equal to |
+   | `!=` | Not equal to |
+   | `===` | Equal value & type |
+   | `!==`| Not equal value or not equal type |
+   | `>` | Greater Than |
+   | `<` | Less Than |
+   | `>=` | Greater than or equal to |
+   | `<=` | Less than or equal to |
+   | `?` | Ternary operator |
+
+  </p>
+
+  #### 4. Logical Operators :-
+
+    <p align="center">
+
+    | Sign | Name |
+    |:---:|:---:|
+    | `&&` | Logical and |
+    | `\|\|` | Logical or |
+    | `!` | Logical not |
+
+  </p>
+
+
+* ### Comments on JavaScript
+  
+  Sometimes we want our programs to contain a text which is not executed by the JavaScript Engine.
+
+  Such a text is called ***comment*** in JavaScript.
+
+  A comment in JavaScript can be written as follows :-
+
+  ```js
+  let a = 2; // This is a single line comment
+
+  /*
+    This is a multiline comment
+  */
+  ```
+
+  Sometimes comments are used to prevent the execution of some lines of code.
+
+  ```js
+  let a = true;
+  // a = false; // Commented line won't executed
+  ```
+
+* ### Conditional Statement
+
+  Sometimes we might have to execute a block of code based of some condition.
+  
+  For example a prompt might ask for the age of the user and if greater than 18, display a special message.
+
+  In JavaScript we have three forms of `if ... else` statement.
+
+  #### 1. `if statement` 
+   
+  The `if statement` in JavaScript looks like this :-
+
+  ```js
+  if(condition) {
+    // execute this code
+  }
+  ```
+
+  The `if statement` evaluates the conditon inside the `()`. If the condition is evaluated to true, the code is not executed.
+
+  #### 2.  `if ... else statement`
+
+  The `if statement` can have an optional else clause. The syntax looks something like this :-
+
+  ```js
+  if(condition) {
+    // block of code if condition true
+  } else {
+    //  block of code if condition false
+  }
+  ```
+
+  IF the condition is true, code inside if is executed else code inside the else block is executed.
+
+  #### 3. `if ... else if ... else statement`
+
+  Sometimes we might want to keep recheacking a set of conditions one by one until one matches we use if ... else if for achieving this.
+
+  Syntax of if ... else if looks like this :-
+
+  ```js
+  if(condition) {
+    // block of code if condition true
+  } else if {
+    // block of code if condition false
+  } else {
+    // block of code both if & else if condition are false
+  }
+  ```
+
+* ### Ternary Operator
+  
+  Evaluates a condition and executes a block of code base on the condition.
+
+  ```js
+  condition ? expression1 : expression2
+  ```
+
+  e.g:-
+  ```js
+  (marks > 10) ? "Yes" : "No"; // If marks are greater than 10
+  ```
