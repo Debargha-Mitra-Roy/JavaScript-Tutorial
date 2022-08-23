@@ -264,3 +264,113 @@ let a = 7; // Declaring Variable
   ```js
   (marks > 10) ? "Yes" : "No"; // If marks are greater than 10
   ```
+
+* ### Loops & Functions
+
+  We use loops to perform repeated actions. For example - If you are designed a task of a printing numbers from 1 to 100, it will be very hectic to do it manually. Loops help us automate such tasks.
+
+* ### Types of Loops in JavaScript
+
+  **for loop** :- loop a block of code no. of times.
+
+  **for in loop** :- loops through the reys of an object.
+
+  **for of loop** :- loops through the values of an object.
+
+  **while loop** :- loops a block based on a specific condition.
+
+  **do-while loop** :- while loop varient which runs atleast once.
+
+  * #### The for loop :-
+    
+    The syntax of a for loop looks something like this -
+
+    ```js
+    for(statement1; statement2; statement3) {
+        // Code to be executed
+    }
+    ```
+    
+    * `Statement1` is executed one time.
+
+    * `Statement2` is the condition based on which the loop runs (loop body is executed).
+
+    * `Statement3` is executed everytime the loop body is executed.
+
+  * #### The for-in loop :-
+    
+    The syntax of a for-in loop looks like this -
+
+    ```js
+    for(key in object) {
+        // Code to be executed
+    }
+    ```
+    
+    * #### The for-of loop :-
+    
+    The syntax of a for-of loop looks like this -
+
+    ```js
+    for (variable of iterable) {
+        // Code to be executed
+        // Iterable data-structure like Arrays, Strings etc.
+    }
+    ```
+    * #### The while loop :-
+    
+    The syntax of a while loop looks like this -
+
+    ```js
+    while(condition) {
+        // Code to be executed
+        // Iterable data-structure like Arrays, Strings etc.
+    }
+    ```
+
+    * **NOTE** :- If the condition becomes false, the loop will never end and this might crash the runtime.
+
+    * #### The do-while loop :-
+    
+    The syntax of a while loop looks like this -
+
+    ```js
+    do {
+        // Code to be executed
+        // Executed atleast one time
+    } while(condition);
+    ```
+
+* ### Functions in JavaScript
+  
+  A JavaScript function is a block of code designed to perform a particular task.
+
+  The syntax of a while loop looks like this -
+
+  ```js
+  fuction myFunction() {
+    
+    // Code
+  }
+  ```
+  or
+
+  ```js
+  fuction myFunction(parameter1, parameter2, ..., parameterN) {
+
+    // Code
+  }
+  ```
+
+  Fuction invocation is a way to use the code inside the function.
+
+  A function can also return a value. The value is **returned** back to the caller.
+
+  ```js
+  const myFuntion = (parameter1, parameter2, ..., parameterN) => {
+
+    // Code
+
+    return <datatype>;
+  }
+  ```
