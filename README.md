@@ -1,16 +1,16 @@
 # JavaScript Tutorial
 
-* ### Introduction to Programming
+* ## Introduction to Programming
 
   Programming is the act of constructing a program, a set of precise instructions telling a computer what to do.
 
-* ### What is <a href="https://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a>
+* ## What is <a href="https://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a>
   
   <a href="https://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a> is a standard on which JavaScript is based. It was created to ensure that different documents on JavaScript are actually talking about the same language.
 
   JavaScript & <a href="https://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a> can almost always be used interchangeably JavaScript is very liberal in what it allows.
 
-* ### How to execute JavaScript
+* ## How to execute JavaScript
 
   JavaScript can be executed right inside one's browser. You can open the JavaScript console and Start Writing Java Script there.
 
@@ -22,44 +22,45 @@
   node file.js
   ```
 
-## Variables & DataTypes
-A variable is a container that stores a value. This is very similar to the containers used to store a datatype.
+* ## Variables & DataTypes
 
-```js
-var a = 7; // Literal
-let a = 7; // Declaring Variable
+  A variable is a container that stores a value. This is very similar to the containers used to store a datatype.
 
-/*
-  Here 'a' is identifier &  '=' is assignment operator
-*/
-```
+  ```js
+  var a = 7; // Literal
+  let a = 7; // Declaring Variable
+  
+  /*
+    Here 'a' is identifier &  '=' is assignment operator
+  */
+  ```
 
-* ### Rules for choosing variable names
-
-  1. letters (`A - Z` & `a - z`), digits (`0 - 9`), underscores  (`_`) & `$` sign allowed.
-
-  2. Must begin with a `$`, `_` or a letter.
-
-  3. JavaScript reerved words cannot be used as variable name.
-
-  4. Variable names are case sensitive.
-
-* ### `var` vs `let` in JavaScript
-
-  1. `var` is globally scoped while `let` & `const` are block scoped.
-
-  2. `var` can be updated & redeclared its scope.
-
-  3. `let` can be updated but not redclared.
-
-  4. `const` can neither be updated nor be redeclared.
-
-  5. `var` variables are initialized with undefined whereas `let` & `const` variables are not initialized.
-
-  6. `const` must be initialized during declaration unlike `let` & `var`.
-
-* ### Primitive DataTypes & Objects
-
+  * ### Rules for choosing variable names
+  
+    1. letters (`A - Z` & `a - z`), digits (`0 - 9`), underscores  (`_`) & `$` sign allowed.
+  
+    2. Must begin with a `$`, `_` or a letter.
+  
+    3. JavaScript reerved words cannot be used as variable name.
+  
+    4. Variable names are case sensitive.
+  
+  * ### `var` vs `let` in JavaScript
+  
+    1. `var` is globally scoped while `let` & `const` are block scoped.
+  
+    2. `var` can be updated & redeclared its scope.
+  
+    3. `let` can be updated but not redclared.
+  
+    4. `const` can neither be updated nor be redeclared.
+  
+    5. `var` variables are initialized with undefined whereas `let` & `const` variables are not initialized.
+  
+    6. `const` must be initialized during declaration unlike `let` & `var`.
+  
+  * ### Primitive DataTypes & Objects
+  
   **Primitive datatypes** are a set of basic datatypes in JavaScript.
 
   **Objects** is a non-primitive datatypes in JavaScript.
@@ -109,11 +110,11 @@ let a = 7; // Declaring Variable
     }
     ```
 
-* ### Expressions & Conditions
+* ## Expressions & Conditions
 
   A fragment of code that produces a value is called an expression. Every value written literally is an expression.
 
-* ### Operators in JavaScript
+* ## Operators in JavaScript
 
   #### 1. Arithmetic Operators :-
 
@@ -179,7 +180,7 @@ let a = 7; // Declaring Variable
   </p>
 
 
-* ### Comments on JavaScript
+* ## Comments on JavaScript
   
   Sometimes we want our programs to contain a text which is not executed by the JavaScript Engine.
 
@@ -202,7 +203,7 @@ let a = 7; // Declaring Variable
   // a = false; // Commented line won't executed
   ```
 
-* ### Conditional Statement
+* ## Conditional Statement
 
   Sometimes we might have to execute a block of code based of some condition.
   
@@ -252,7 +253,7 @@ let a = 7; // Declaring Variable
   }
   ```
 
-* ### Ternary Operator
+* ## Ternary Operator
   
   Evaluates a condition and executes a block of code base on the condition.
 
@@ -265,11 +266,11 @@ let a = 7; // Declaring Variable
   (marks > 10) ? "Yes" : "No"; // If marks are greater than 10
   ```
 
-* ### Loops & Functions
+* ## Loops & Functions
 
   We use loops to perform repeated actions. For example - If you are designed a task of a printing numbers from 1 to 100, it will be very hectic to do it manually. Loops help us automate such tasks.
 
-* ### Types of Loops in JavaScript
+* ## Types of Loops in JavaScript
 
   **for loop** :- loop a block of code no. of times.
 
@@ -341,7 +342,7 @@ let a = 7; // Declaring Variable
     } while(condition);
     ```
 
-* ### Functions in JavaScript
+* ## Functions in JavaScript
   
   A JavaScript function is a block of code designed to perform a particular task.
 
@@ -349,7 +350,7 @@ let a = 7; // Declaring Variable
 
   ```js
   fuction myFunction() {
-    
+
     // Code
   }
   ```
@@ -374,3 +375,125 @@ let a = 7; // Declaring Variable
     return <datatype>;
   }
   ```
+
+* ## Strings
+
+  Strings are used to store and manipulate text. String can be created using the following syntax.
+
+  ```js
+  let name = "Ryzen"; // Creates a string
+  print(name.length); // This property prints length of the string
+  ```
+
+  Strings can also be created using single quotes.
+
+  ```js
+  let name = 'Ryzen';
+  ```
+ 
+  * ### Template Literals
+
+    With template literals use backlits instead of quotes to define a string.
+  
+    ```js
+    let name = "Ryzen";
+    ```
+
+    With template literals, it is possible to use both single as well as double quotes inside a string.
+  
+    ```js
+    let sentence = `The name "is" Ryzen's`;
+    ```
+
+    We can insert variables directly in template literal. This is called string interpolation.
+  
+    ```js
+    let a = `This is ${name}`;
+    ```
+
+  * ### Escape Sequance Characters
+
+    If you try to print the following string, JavaScript will misunderstand it.
+
+    ```js
+    let name = 'Adam D'Angelo';
+    ```
+
+    We can use single quote escape sequence to solve the problem.
+
+    ```js
+    let name = 'Adam D\'Angelo';
+    ```
+
+    Similarly we can use `\` inside a string with double quotes.
+
+    Other escape sequance characters are as follows :-
+    <p align="center">
+
+      | Symbol | Meaning |
+      |:---:|:---:|
+      | `\n` | Newline |
+      | `\t` | Tab |
+      | `\r` | Carriage Return |
+    </p>
+
+  * ### String Properties & Methods :-
+
+    a. 
+    ```js
+    let name = "Ryzen";
+    print(name.length); // Prints '5'
+    ```
+
+    b.
+    ```js
+    let name = "Ryzen";
+    print(name.toUpperCase()); // Prints "RYZEN"
+    ```
+
+    c.
+    ```js
+    let name = "Ryzen";
+    print(name.toLowerCase()); // Prints "ryzen"
+    ```
+
+    d.
+    ```js
+    let name = "Ryzen";
+    print(name.slice(2, 4)); // Prints "ze" (from 2 to 4, 4 not included)
+    ```
+
+    e.
+    ```js
+    let name = "Ryzen";
+    print(name.slice(2)); // Prints "zen" (from 2 to end)
+    ```
+
+    f.
+    ```js
+    let name = "Ryzen is a coder";
+    print(name.replace("coder", "student")); // Prints "Ryzen is a student"
+    ```
+
+    g.
+    ```js
+    let name1 = "Ryzen";
+    let name2 = "Debargha"
+    let name = name1.concat(name2, "Yes"); // We can even use '+' operator
+    print(name); // Prints "RyzenDebarghaYes"
+    ```
+
+    h.
+    ```js
+    let name = "  Ryzen  ";
+    let newName = name.trim(); // removes whitespaces
+    print(newName); // Prints "Ryzen"
+    ```
+
+    i. Strings are immutable. Inorder to access the character at an index we use the following syntax.
+
+    ```js
+    let name = "Ryzen";
+    print(name[0]); // Prints 'R'
+    print(name[1]); // Prints 'y'
+    ```
