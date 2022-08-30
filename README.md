@@ -246,7 +246,7 @@
   ```js
   if(condition) {
     // block of code if condition true
-  } else if {
+  } else if(condition) {
     // block of code if condition false
   } else {
     // block of code both if & else if condition are false
