@@ -497,3 +497,160 @@
     print(name[0]); // Prints 'R'
     print(name[1]); // Prints 'y'
     ```
+
+* ## Arrays
+
+  Arrays are variables which can hold more than one value.
+
+  ```js
+  const fruits = ["banana", "apple", "grapes"];
+  const a = [7, "Ryzen", false];
+  ```
+
+  * ### Accessing values
+
+    ```js
+    let numbers = [1, 2, 7, 9];
+    console.log(numbers[0]); // Prints 1
+    console.log(numbers[2]); // Prints 7
+    ```
+
+  * ### Finding the length
+   
+    ```js
+    let numbers = [7, 2, 40, 9];
+    console.log(numbers.length); // Prints 4, lenght of the array
+    ```
+
+  * ### Changing the values
+
+    ```js
+    let numbers = [7, 2, 40, 9];
+    /* Arrays are mutable. Arrays can be changed. */
+    numbers[2] = 6;
+    console.log(numbers); // Prints [7, 2, 6, 9]
+    ```
+
+  * ### Type of Array
+
+    ```js
+    const n = [1, 2, 3, 4];
+
+    console.log(typeof n); // Prints 'Object'
+    ```
+
+  * ### Notes
+
+    Array can hold many values under a single name.
+
+  * ### Array Methods
+
+    There are some important array methods in JavaScript. Some of them are as follows :
+
+    1. #### `toString()`
+       
+       Converts an array to a string of comma separated values.
+
+       ```js
+       let n = [1, 7, 9];
+       n.toString(); // 1, 7, 9
+       ```
+
+    2. #### `join()`
+
+       Joins all the array elements using a separator.
+
+       ```js
+       let n = [1, 7, 9];
+       n.join("-"); // 1-7-9
+       ```
+
+    3. #### `pop()`
+      
+       Removes last element from the array.
+
+       ```js
+       let n = [1, 7, 9];
+       n.pop() // Update the original array returns the popped value
+       ```
+
+    4. #### `push()`
+
+       Adds a new element at the end of the array.
+
+       ```js
+       let n = [1, 7, 9];
+       /* Modules of the original array, returns the new array length */
+       n.push(8); // [1, 7, 9, 8]
+       ```
+
+    5. #### `shift()`
+
+       Removes first element & returns it.
+       
+    6. #### `unshift()`
+
+       Adds element to the beginning. Returns new array length.
+
+    7. #### `delete`
+
+       Array elements can be deleted using the delete operator.
+       ```js
+       let n = [1, 7, 9];
+       /* delete is an operator */
+       n.delete[1]; // [7, 9]
+       ```
+
+    8. #### `concat()`
+
+       Used to join arrays to the given array.
+
+       ```js
+       let a1 = [1, 2, 3];
+       let a2 = [4, 5, 6];
+       let a3 = [7, 8, 9];
+
+       /* Returns a new array. does not change existing arrays */
+       a1.concat(a2, a3); // Returns [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    9. #### `sort()`
+       
+       `sort()` method is used to sort an array alphabetically.
+
+       ```js
+       let a = [7, 9, 8];
+       /* Modify the original array */
+       a.sort(); // [7, 8, 9]
+       ```
+
+       `sort()` takes an optional campare function. If this function is provided as the first argument, the `sort()` function will consider these values (the value returned from the compare function) as the basis of sorting.
+
+    10. #### `splice()`
+
+        `splice()` can be used to add new items t an array.
+
+        ```js
+        const numbers = [1, 2, 3, 4, 5];
+        // Returns deleted items modifies the Array
+        numbers.splice(2, 1, 23, 24); // splice(position, no.of elements to remove, elements to be added)
+        ```
+
+    11. #### `slice()`
+
+        Slices out a piece from an array. It creates a new array.
+
+        ```js
+        const num = [1, 2, 3, 4];
+        num.slice(2); // [3, 4]
+        num.slice(1, 3); // [2, 3]
+        ```
+
+    12. #### `reverse()`
+
+        Reverses the elements in the sources array.
+        
+        ```js
+        let a = [7, 9, 8];
+        /* Modify the original array */
+        a.reverse(); // [8, 9, 7]
+        ```
