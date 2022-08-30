@@ -654,3 +654,62 @@
         /* Modify the original array */
         a.reverse(); // [8, 9, 7]
         ```
+
+  * ### Looping through Arrays
+
+    Arrays can be looped through using the classical JavaScript for loop or through some other methods.
+
+    * #### `forEach loop`
+
+      Calls a function, once each array element.
+      ```js
+      const a = [1, 2, 3];
+      a.forEach((value, index, array) => {
+        // Function Logic
+      });
+      ```
+
+    * #### `map()`
+
+      Creates a new array by performing some operation on each array element.
+
+      ```js
+      const a = [1, 2, 3];
+      a.map((value, index, array) => {
+        return (value * value);
+      });
+      ```
+
+    * #### `filter()`
+
+      Filters an array with values that passses a test. Creates a new array.
+
+      ```js
+      const a = [1, 6, 3, 7, 5];
+      a.filter(greater_than_ 5);
+      ```
+      
+    * #### `reduce method`
+
+      Reduces an array to a single value.
+
+      ```js
+      const n = [1, 2, 3, 4, 5];
+      let sum = numbers.reduce(add) // add -> function // sum = (1 + 2 + 3 + 4 + 5) 
+      ```
+    
+    * #### `Array from()`
+      
+      Used to create an array from any other object.
+
+      ```js
+      Array.from("Harry");
+      ```
+
+    * #### `for...of`
+
+      for...of loop can be used to get the values from the array.
+
+    * #### `for...in`
+
+      for...in loop can be used to get the keys from an array.
