@@ -713,3 +713,116 @@
     * #### `for...in`
 
       for...in loop can be used to get the keys from an array.
+
+* ## JavaScript in the Browser
+
+  JavaScript was initially created to make web pages alive. JavaScript can be written right in a web pages HTML to make it interactive.
+
+  The browser has an embedded engine called JavaScript Engine or the JavaScript Runtime.
+
+  JavaScript's ability in the browser is very limited to protect the user's safety. For example - a webpage on http://goofle.com can not access https://google.com and steal information from there.
+
+  * ### Developer Tools
+
+    Every browser has some developer tools which makes a developer's life a lot easier.
+
+    `F12` on **Chrome** opens Dev Tools.
+
+    <p align="center">
+
+      | Elements | Console | Network |
+      |:---:|:---:|:---:|
+      | All HTML Elements | All the Errors + Logs | All network requests |
+    </p>
+
+    We can also write JavaScript commands in the console.
+
+    * ### The `Script` Tag
+
+      The `script` tag is used to insert JavaScript into an HTML Page.
+
+      The `script` can be used to insert JavaScript external or internal scripts.
+
+      ```html
+      <script>
+        alert("Hello !!!")
+      </script>
+      ```
+
+      or
+
+      ```html
+      <script src="./script.js"></script>
+      ```
+
+      The benefit of a seperate JavaScript file is that the browser will downloaded it and store it in the cache.
+
+    * ### Console Object Methods
+
+      The console object has several methods, `log` being one them.Some of them are as folllows.
+
+      ```js
+      assert() // Used to assert a condition
+      clear()  // Clears the condole
+      log()    // Outputs a message to the console
+      table()  // Displays a tabuler data
+      warn()   // Used for warning
+      error()  // Used for errors
+      info()   // Used for special information
+      ```
+
+      You will naturally remember some or all of these with time.
+
+      Comprehensive list can be looked up on <a href="https://developer.mozilla.org/en-US/docs/Web/API/console">MDN</a>.
+
+    * ### Interaction
+    
+      * #### `alert()`
+
+        Used to invoke a mini window with message.
+
+        ```js
+        alert("Hello!!!");
+        ```
+
+      * #### `prompt()`
+
+        Used to take user input as String.
+
+        ```js
+        let input = prompt("Hi", "No"); // 'No' -> Optional default value
+
+      * #### `confirm()`
+
+        Shows a message and waits for the user t press **OK** or **Cancel**. Returns `true` for **OK** and `false` for **Cancel**.
+
+      This exact location and look is detemined by the browser which is a limitation.
+
+    * ### Window Object, BOM, DOM
+
+      We have the following objects when JavaScript runs in the browser.
+      
+      <p align="center">
+        <img src="images/JsObjects.png" alt="JavaScript Objects">
+      </p>
+
+      Window object represents browser window and provides methods t control it. It is a global object.
+
+      * #### Document Object Model (DOM)
+
+        DOM represents the page content as HTML.
+
+        ```js
+        document.body // Page body as JS Object
+        document.body.style.background = "green"; // Changes page background to green
+        ```
+
+      * #### Browser Object Model (BOM)
+
+        The Browser Object Model (BOM) represents additional objects provided by the browser (Host Environment) for working with everything except the document.
+
+        The functions `alert` / `confirm` / `prompt` are also a part of the BOM.
+
+        ```js
+        location.href = "https://google.com"; // Redirect to another URL
+        ```
