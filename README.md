@@ -826,3 +826,73 @@
         ```js
         location.href = "https://google.com"; // Redirect to another URL
         ```
+
+* ## Waling through DOM
+
+  DOM tree refers to the HTML page where all the nodes are objects. There can be three main types of nodes in the DOM tree :-
+
+   * Text nodes
+   * Element nodes
+   * Comment nodes
+
+  <p align="center">
+    <img src="./images/dom-tree.png" alt="dom-tree">
+  </p>
+
+  In an HTML page, `<html>` is at the root and `<head>` and `<body>` are its children etc.
+
+  A text node is a;lways a leaf of the tree
+
+  * ### Auto Correction
+
+    If an errorneous HTML is encountered by the browser it tends to correct it. For example, if we put something after the `<body>`, it for example, if we put something after the `<body>`. Another example is `<table>` tag which must contain `<tbody>`.
+    
+  * ### Walking the DOM
+
+    ```html
+    <html>
+      <head>
+        <title>Hello</title> <!-- document.body (Page Body Tag) -->
+      </head> <!-- document.head -->
+      <body>
+        ...
+        ... <!-- document.documentElement (Page HTML Tag) -->
+        ...
+      </body>
+    </html>
+    ```
+
+  * ### NOTE :-
+  
+    `document.body` can sometimes be `null` if the JavaScript is written before the `body` tag.
+
+  * ### Children of an element
+
+    Direct as well as deeply nested elements of an element are called children.
+
+  * ### Child Nodes
+
+    Elements that are direct children. i.e.- `head` & `body` are children of `<html>`.
+
+  * ### Descendent Nodes
+
+    All nested elements, children, their children & so on ...
+
+  * ### `firstChild`, `lastChild` & `childNodes`
+
+    element.firstChild -> first child element
+    element.lastChild -> last child element
+    element.childNodes -> All child nodes
+
+    Folowing is always true :-
+
+    ```js
+    element.childNodes[0] === element.firstChild;
+    element.childNodes[element.childNodes.length - 1] === element.lastChild;
+    ```
+
+    There is also a method `element.hasChildNodes()` to check whether there are any child nodes.
+
+    * ### NOTE :-
+
+      `childNodes` looks like an array. But its not actually an Array but a collection. We can use `Array.from(collection) to convert it inside the Array.
